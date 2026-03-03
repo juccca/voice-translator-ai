@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VoiceBridge</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="app">
+
+    <header>
+      <div class="logo">Voice<span>Bridge</span></div>
+      <p class="tagline">Fale. Traduza. Conecte.</p>
+    </header>
+
+    <main>
+      <div class="card">
+
+        <div class="lang-selector">
+          <div class="lang-pill active">🇧🇷 Português</div>
+          <div class="arrow">→</div>
+          <div class="lang-options">
+            <button class="lang-btn active" data-lang="english">🇺🇸 Inglês</button>
+            <button class="lang-btn" data-lang="mandarin">🇨🇳 Mandarim</button>
+          </div>
+        </div>
+
+        <div class="mic-area">
+          <button id="micBtn" class="mic-btn" aria-label="Gravar voz">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 1C10.34 1 9 2.34 9 4V12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12V4C15 2.34 13.66 1 12 1Z" fill="currentColor"/>
+              <path d="M19 11V12C19 15.87 15.87 19 12 19C8.13 19 5 15.87 5 12V11H3V12C3 16.56 6.44 20.38 11 20.91V23H13V20.91C17.56 20.38 21 16.56 21 12V11H19Z" fill="currentColor"/>
+            </svg>
+          </button>
+          <p class="mic-label" id="micLabel">Clique para falar</p>
+          <div class="wave-container" id="waveContainer">
+            <div class="wave-bar"></div><div class="wave-bar"></div>
+            <div class="wave-bar"></div><div class="wave-bar"></div>
+            <div class="wave-bar"></div><div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+          </div>
+        </div>
+
+        <div class="result-panel" id="resultPanel">
+          <div class="result-block">
+            <label>Você disse</label>
+            <p id="transcriptionText" class="result-text">—</p>
+          </div>
+          <div class="divider"></div>
+          <div class="result-block">
+            <label id="translationLabel">Tradução</label>
+            <p id="translationText" class="result-text highlight">—</p>
+          </div>
+          <button class="play-btn" id="playBtn" style="display:none">
+            ▶ Ouvir tradução
+          </button>
+        </div>
+
+        <div class="status" id="status"></div>
+      </div>
+    </main>
+
+    <footer>
+      Feito com Whisper · Groq · gTTS
+    </footer>
+  </div>
+
+  <audio id="audioPlayer"></audio>
+  <script src="/static/script.js"></script>
+</body>
+</html>
