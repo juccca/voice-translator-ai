@@ -207,7 +207,7 @@ python-dotenv==1.0.1
 
 ## Contexto Acadêmico
 
-Projeto desenvolvido como conclusão do **Bootcamp de IA & Dados — DIO/Bradesco**, expandindo o laboratório de integração entre Whisper, ChatGPT e gTTS com:
+Projeto desenvolvido como exercício do **Bootcamp de GenIA & Dados — DIO/Bradesco**, expandindo o laboratório de integração entre Whisper, ChatGPT e gTTS com:
 
 - Interface web full stack (FastAPI + HTML/CSS/JS)
 - Substituição do ChatGPT pela API da Groq (LLaMA 3.1) — gratuita e de alta performance
